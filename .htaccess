@@ -210,6 +210,7 @@ Options -MultiViews
     AddType font/otf                                    otf
 
 
+
   # Other
 
     AddType application/octet-stream                    safariextz

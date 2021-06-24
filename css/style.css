@@ -296,7 +296,7 @@
 .footer__menu {
   position: absolute;
   width: 15%;
-  height: 129vh;
+  height: 140vh;
   left: 0px;
   top: 0px;
   background: #263238;
@@ -310,7 +310,8 @@
   font-weight: 800;
   font-size: 13.4106px;
   line-height: 18px;
-  margin: 30px 0; }
+  margin: 16% 0 20%;
+}
   .menu_title a {
     padding: 19px 40px;
     background: #FF5722;
@@ -320,7 +321,8 @@
     display: flex;
     justify-content: space-between;
     width: 67%;
-    margin: auto; }
+    margin: auto;
+  }
   .menu_title a:hover {
     box-shadow: 0px 0px 35px rgba(255, 87, 34, 0.8); }
 
@@ -616,8 +618,8 @@
 
 .header {
   justify-content: space-between;
-  height: 200px;
-  padding: 0 3% 0 26%;
+  height: 170px;
+  padding: 1% 3% 0 26%;
   border: 1px solid #ececec;
   box-shadow: 0px 3px 40px rgba(38, 50, 56, 0.25); }
 
@@ -635,6 +637,81 @@
 
 .center {
   padding: 0px calc(50% - 590px); }
+
+.footer_maps {
+  display: flex;
+  padding: 3% 15% 4% 28%;
+}
+
+.footer_text{
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(137, 137, 137, 1);
+  letter-spacing: 0.03em;
+  line-height: 24px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  color: #7a7a7a;
+  font-family: Manrope;
+  font-style: normal;
+}
+.footer_text_top{
+  margin-top: 35px;
+  margin-bottom: 25px;
+}
+
+.link_box{
+  width: 608px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 64px;
+  font-family: Manrope;
+}
+
+.maps__h3{
+  font-size: 18px;
+  font-weight: bold;
+  color: #FF5722;
+  text-align: right;
+  letter-spacing: 0.03em;
+  line-height: 26px;
+}
+
+.maps__ul{
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  line-height: 44px;
+  margin-top: 26px;
+}
+
+.link_mass{
+  margin: 5px 0 -12px 1px;
+}
+
+.maps__a{
+  color: rgba(137, 137, 137, 1);
+  text-align: right;
+  letter-spacing: 0.03em;
+  line-height: 28px;
+  text-decoration: none;
+}
+
+.orders-detalits {
+  display: flex;
+  padding: 5% 0% 2% 35%;
+  flex-direction: column;
+}
+
+.font-text {
+  font-family: Manrope;
+}
+
+.detalits-margin {
+  margin: 0% 0% 2% 0%;
+}
 
 #switcher {
   position: absolute;

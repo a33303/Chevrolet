@@ -14,7 +14,9 @@
 <!--Часть меню с поисковой строкой-->
     <div class="header" id="app">
       <div class="header__left">
-        <a href="index.html" class="logo_text">{{ title }}</a>
+        <a href="index.html" class="logo_text">
+          <img src="../chevrolet_front/img/logo.png" alt="" width="100">
+        </a>
         <form class="header__form" action="#">
           <div class="search-form">
             <div class="tags">
@@ -52,6 +54,9 @@
     </div>
     </div>
  <!-- Dashboard заказов -->
+    <template>
+      {{ order}}
+    </template>
 <section>
     <div class="footer__menu">
       <div class="menu_title">
@@ -64,38 +69,49 @@
           <li><a href="#"><i class="fas fa-history"></i><span>История</span></a></li>
         </ul>
       </div>
-
-<!--      <a href="#" class="button-add-order"><i class="fas fa-plus"></i>&nbsp;&nbsp;Новый Заказ</a>-->
-<!--      <input id="switcher" type="checkbox">-->
-<!--      <label class="open" for="switcher"><i class="fas fa-bars"></i></label>-->
-<!--      <nav>-->
-<!--        <ul class="menu">-->
-<!--          <li>-->
-<!--             <a href="#" class="menu__link">-->
-<!--               <i class="fas fa-clipboard-list"></i>Заказы-->
-<!--             </a>-->
-<!--          </li>-->
-<!--          <li>-->
-<!--            <a href="#" class="menu__link">-->
-<!--              <i class="fas fa-users"></i>Команда-->
-<!--            </a>-->
-<!--          </li>-->
-<!--          <li>-->
-<!--            <a href="#" class="menu__link">-->
-<!--              <i class="fas fa-history"></i>История-->
-<!--            </a>-->
-<!--          </li>-->
-<!--        </ul>-->
-<!--        <label class="close" for="switcher"><i class="far fa-window-close"></i></label>-->
-<!--      </nav>-->
     </div>
 </section>
 <script src="https://unpkg.com/vue@next"></script>
 <script src="js/app.js"></script>
 </body>
 <footer>
+  <div class="footer_maps">
+    <div class="max_box max_box_left">
+      <a class="logo" href="">
+        <img class="logo__img" alt="logo" src="../chevrolet_front/img/logo.png" width="100">
+      </a>
+      <div class="footer_text">
+        <div class="footer_text_top">
+          Официальный сервисный центр Chevrolet занимается ремонтом и обслуживанием автомобилей собственной марки. Ежедневно принимает до 100 заказов.
+        </div>
+        <div class="footer_text_bot">
+          Efficiently plagiarize 24/365 action items and focused infomediaries.
+          Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.
+        </div>
+      </div>
+    </div>
+    <div class="link_box">
+      <div class="maps_box">
+        <h3 class="maps__h3">О КОМПАНИИ</h3>
+        <ul class="maps__ul">
+          <li class="link_mass"><a href="#" class="maps__a">Все заказы</a></li>
+          <li class="link_mass"><a href="#" class="maps__a">О Нас</a></li>
+          <li class="link_mass"><a href="#" class="maps__a">История</a></li>
+          <li class="link_mass"><a href="#" class="maps__a">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="maps_box">
+        <h3 class="maps__h3">ИНФОРМАЦИЯ</h3>
+        <ul class="maps__ul">
+          <li class="likn_mass"><a href="#" class="maps__a">Вопросы и ответы</a></li>
+          <li class="likn_mass"><a href="#" class="maps__a">Поддержка</a></li>
+          <li class="likn_mass"><a href="#" class="maps__a">Сертификация</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
   <div class="footer_copyright center">
-    <div class="copyright">© 2021  Brand  All Rights Reserved.
+    <div class="copyright">© 2021  Все права защищены. При копировании материала гиперссылка обязательна.
     </div>
     <div class="social-network">
       <a href="https://www.facebook.com">

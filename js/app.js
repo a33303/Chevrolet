@@ -1,44 +1,56 @@
 const App = {
   data() {
     return {
-      title: 'Все заказы',
       searchPlaceholder: 'Поиск заказов',
       inputValue: '',
-      inputValueVinCars:'',
-      inputValueModelCars:'',
-      inputValueYearCars:'',
-      inputValueName:'',
-      inputValueComment:'',
+      vin:'',
+      model:'',
+      production_year:'',
+      name:'',
+      description:'',
       placeholderOrderVin:'Введите VIN автомобиля',
-      users: ['Ivan', 'Sasha']
+      form:{},
     }
   },
   methods: {
-    inputChangeHandler(event){
-      this.inputValue = event.target.value
+    clearToForm() {
+      this.vin = ''
+      this.model = ''
+      this.production_year = ''
+      this.name = ''
+      this.description = ''
     },
-    inputChangeHandlerVin(event){
-      this.inputValueVinCars = event.target.value
+    addNewOrder(e) {
+      e.preventDefault()
+      console.log('Отправка JSON данных', this.form)
+
+      // fetch('http://localhost:63342/chevrolete/chevrolet_front/order.php',{
+      //   method:'POST',
+      //   headers: {'Content-Type': 'application/json'},
+      //   body: JSON.stringify(this.form),
+      //   url: "/order.php"
+      // }).then(
+      //   function (response) {
+      //     // успешно получен ответ сервера на запрос
+      //     console.log('Ответ сервера', response);
+      //   },
+      //   function(error) {
+      //     // Ошибка при осуществлении запроса
+      //     console.error(error);
+      //   }
+      // );
+
     },
-    inputChangeHandlerMode(event){
-      this.inputValueModelCars = event.target.value
+    sendIdentity: function (e) {
+      e.preventDefault()
+      axios
+        .post('/chevrolete/chevrolet_front/order.json')
+        .then(function (response) {
+          this.form = response.data;
+        });
     },
-    inputChangeHandlerName(event){
-      this.inputValueName = event.target.value
-    },
-    inputChangeHandlerComment(event){
-      this.inputValueComment = event.target.value
-    },
-    inputChangeHandlerYear(event){
-      this.inputValueYearCars = event.target.value
-    },
-    addNewOrder() {
-      this.users.push(this.inputValueName)
-    }
   }
 }
-
-
 Vue.createApp(App).mount('#app')
 
 
