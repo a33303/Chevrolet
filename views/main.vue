@@ -1,0 +1,162 @@
+<template>
+  <head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/afdc7aa636.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Электронная система контроля заказов</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+  <!--Часть меню с поисковой строкой-->
+  <div class="header" id="app">
+    <div class="header__left">
+      <a href="index.html" class="logo_text">
+        <img src="../chevrolet_front/img/logo.png" alt="" width="100">
+      </a>
+      <form class="header__form" action="#">
+        <div class="search-form">
+          <div class="tags">
+            <input type="text" :placeholder="searchPlaceholder" class="user-text-find" >
+            <a href="#" type="submit" class="button-find">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+              <span class="button__text button-new-order">
+                <i class="fas fa-leaf"></i>Новый
+              </span>
+          <span class="button__text button-urgent-order">
+                <i class="fas fa-fire"></i>Срочный
+              </span>
+        </div>
+      </form>
+    </div>
+    <div class="header__right">
+      <div class="login-account">
+        <a href="login.html" class=""><i aria-hidden="true"></i>
+          <span>Войти в личный кабинет</span>
+        </a>
+      </div>
+      <!--div class="account">
+        аватарка пользователя
+        <img class="img-account">
+        имя пользователя
+        <div>
+          <a href="#" class="account_text">Сергей Олегович</a>
+          |<a href="#" class="account_text">	&nbsp;Выйти</a>
+        </div-->
+    </div>
+  </div>
+  <!-- Dashboard заказов -->
+  <template>
+    {{ order}}
+  </template>
+  <section>
+    <div class="footer__menu">
+      <div class="menu_title">
+        <a href="neworder.html" class=""><i class="fas fa-plus"></i><span>Новый Заказ</span></a>
+      </div>
+      <div class="menu_nav">
+        <ul class="menu_nav_list">
+          <li><a href="#"><i class="fas fa-clipboard-list"></i><span>Заказы</span></a></li>
+          <li><a href="#"><i class="fas fa-users"></i><span>Команда</span></a></li>
+          <li><a href="#"><i class="fas fa-history"></i><span>История</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="js/app.js"></script>
+  </body>
+  <footer>
+    <div class="footer_maps">
+      <div class="max_box max_box_left">
+        <a class="logo" href="">
+          <img class="logo__img" alt="logo" src="../chevrolet_front/img/logo.png" width="100">
+        </a>
+        <div class="footer_text">
+          <div class="footer_text_top">
+            Официальный сервисный центр Chevrolet занимается ремонтом и обслуживанием автомобилей собственной марки. Ежедневно принимает до 100 заказов.
+          </div>
+          <div class="footer_text_bot">
+            Efficiently plagiarize 24/365 action items and focused infomediaries.
+            Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.
+          </div>
+        </div>
+      </div>
+      <div class="link_box">
+        <div class="maps_box">
+          <h3 class="maps__h3">О КОМПАНИИ</h3>
+          <ul class="maps__ul">
+            <li class="link_mass"><a href="#" class="maps__a">Все заказы</a></li>
+            <li class="link_mass"><a href="#" class="maps__a">О Нас</a></li>
+            <li class="link_mass"><a href="#" class="maps__a">История</a></li>
+            <li class="link_mass"><a href="#" class="maps__a">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="maps_box">
+          <h3 class="maps__h3">ИНФОРМАЦИЯ</h3>
+          <ul class="maps__ul">
+            <li class="likn_mass"><a href="#" class="maps__a">Вопросы и ответы</a></li>
+            <li class="likn_mass"><a href="#" class="maps__a">Поддержка</a></li>
+            <li class="likn_mass"><a href="#" class="maps__a">Сертификация</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer_copyright center">
+      <div class="copyright">© 2021  Все права защищены. При копировании материала гиперссылка обязательна.
+      </div>
+      <div class="social-network">
+        <a href="https://www.facebook.com">
+          <div class="symbol-net">
+            <div class="symbol-f">
+              <span class="fab fa-facebook-f" aria-hidden="true"></span>
+            </div>
+          </div>
+        </a>
+        <a href="https://twitter.com">
+          <div class="symbol-net twitter">
+            <div class="symbol-tw">
+              <span class="fab fa-twitter" aria-hidden="true"></span>
+            </div>
+          </div>
+        </a>
+        <a href="#">
+          <div class="symbol-net-brocken">
+            <div class="symbol-en">
+              <span class="fab fa-linkedin-in" aria-hidden="true"></span>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.pinterest.ru/">
+          <div class="symbol-net">
+            <div class="symbol-p">
+              <span class="fab fa-pinterest-p" aria-hidden="true"></span>
+            </div>
+          </div>
+        </a>
+        <a href="https://www.google.com">
+          <div class="symbol-net">
+            <div class="symbol-g">
+              <span class="fab fa-google-plus-g" aria-hidden="true"></span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </footer>
+</template>
+
+<script>
+export default {
+name: "main"
+}
+</script>
+
+<style scoped>
+
+</style>

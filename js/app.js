@@ -49,6 +49,30 @@ const App = {
           this.form = response.data;
         });
     },
+
+    с(){
+      this.fetchData(this.url)
+        .then(data => {this.item = data})
+        .finally(() => {this._render()})
+    },
+
+     fetchData: function (url) {
+  return new Promise((res, rej) => {
+    let xhr = new XMLHttpRequest(); // if(){} else {} проверка на IE (ActiveXObject)
+    xhr.open('GET', url, true);
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState == 4) { // 4 - зав запроса без ошибки
+        if(xhr.status == 200) { // 200 - ответ сервера о том, что он все сделал
+          res(JSON.parse(xhr.responseText));
+        }
+        else {
+          rej('server Error');
+        }
+      }
+    };
+    xhr.send();
+  })
+}
   }
 }
 Vue.createApp(App).mount('#app')
